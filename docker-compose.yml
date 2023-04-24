@@ -8,8 +8,8 @@ services:
       dockerfile: Dockerfile
     ports:
       - "8080:8080"
-    depends_on:
-      - json-server
+    # depends_on:
+    #   - json-server
 
   # json-server:
   #   image: vimagick/json-server
