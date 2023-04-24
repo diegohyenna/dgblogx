@@ -8,7 +8,7 @@ RUN npm install
 COPY . .
 RUN npm run build
 
-EXPOSE 8080
+# EXPOSE 8080
 
 FROM nginx:1.21.1-alpine
 COPY --from=build /app/dist/dgblogx /usr/share/nginx/html
