@@ -7,7 +7,7 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "80:80"
+      - "80:${PORT:-8080}"
     depends_on:
       - json-server
 
