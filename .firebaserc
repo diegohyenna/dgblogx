@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "dgblogx": {
+      "hosting": {
+        "dgblogx": [
+          "dgblogx"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "dgblogx"
+  }
+}

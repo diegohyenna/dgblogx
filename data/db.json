@@ -1,0 +1,157 @@
+{
+  "blog": [
+    {
+      "id": 1,
+      "category": {
+        "name": "padrão",
+        "categoryId": 1
+      },
+      "img": "https://plus.unsplash.com/premium_photo-1680706777241-85eef2ea148e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1892&q=80",
+      "title": "POST 1",
+      "writter": {
+        "first_name": "Diego",
+        "userId": 1
+      },
+      "comments": [
+        {
+          "userId": 1,
+          "body": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "category": {
+        "name": "tecnologia",
+        "categoryId": 2
+      },
+      "img": "https://images.unsplash.com/photo-1675171882268-ad1adf1223dd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2045&q=80",
+      "title": "POST 2",
+      "writter": {
+        "first_name": "Diego",
+        "userId": 1
+      },
+      "comments": ""
+    },
+    {
+      "id": 3,
+      "category": {
+        "name": "design",
+        "categoryId": 3
+      },
+      "img": "https://images.unsplash.com/photo-1681809696628-05af14d27c84?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1908&q=80",
+      "title": "Post 3 sobre design",
+      "writter": {
+        "first_name": "Gabriela",
+        "userId": 2
+      },
+      "comments": [
+        {
+          "userId": 1,
+          "body": "Esse é um comentário"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "category": {
+        "name": "padrão",
+        "categoryId": 1
+      },
+      "img": "https://images.unsplash.com/photo-1681121311532-e4882571a74e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1935&q=80",
+      "title": "Post 4 sobre design",
+      "writter": {
+        "first_name": "Gabriela",
+        "userId": 2
+      },
+      "comments": [
+        {
+          "userId": 1,
+          "first_name": "Diego",
+          "last_name": "Guimarães Martins",
+          "time": "2023-04-18T15:03:15.241Z",
+          "body": "Esse é o comentário do diego"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "category": {
+        "name": "padrão",
+        "categoryId": 1
+      },
+      "img": "https://images.unsplash.com/photo-1681210974423-89e86024f27a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80",
+      "title": "Post 5 padrão",
+      "writter": {
+        "first_name": "Gabriela",
+        "userId": 2
+      },
+      "comments": ""
+    },
+    {
+      "id": 6,
+      "category": {
+        "name": "padrão",
+        "categoryId": 1
+      },
+      "img": "https://images.unsplash.com/photo-1681210974423-89e86024f27a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80",
+      "title": "Post 6 padrão",
+      "writter": {
+        "first_name": "Diego",
+        "userId": 1
+      },
+      "comments": ""
+    }
+  ],
+  "category": [
+    {
+      "id": 1,
+      "name": "padrão",
+      "count": 3
+    },
+    {
+      "id": 2,
+      "name": "tecnologia",
+      "count": 1
+    },
+    {
+      "id": 3,
+      "name": "design",
+      "count": 1
+    },
+    {
+      "id": 4,
+      "name": "programação",
+      "count": 0
+    }
+  ],
+  "user": [
+    {
+      "id": 1,
+      "first_name": "Diego",
+      "last_name": "Guimarães Martins",
+      "email": "visitante@email.com",
+      "password": "123456",
+      "role": "admin",
+      "img": "https://dgsite.web.app/assets/img/eu.jpg",
+      "job": "Developer",
+      "joined": "2023/04/17",
+      "address": "r. edgard reys navarro 170 ap 201 - Matatu, Salvador, Bahia, Bazil",
+      "about": "Sou formado em Sistemas para Internet pela Unifacs."
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ]
+}

@@ -97,8 +97,21 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "dgblogx:build:production",
+            "firebaseProject": "dgblogx",
+            "firebaseHostingSite": "dgblogx"
+          }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "46984192-1372-4dfd-ac72-04a162c87ef7"
   }
 }
