@@ -1,19 +1,21 @@
 version: '3'
 services:
-  nginx:
-    container_name: blogx_server
-    image: nginx:latest
+  web:
+    container_name: blog_web_dev
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.dev
     ports:
-      - "80:80"
-    depends_on:
+      - "4200:4200"
+    volumes:
+      - /app/node_modules
+      - .:/app
+    links:
       - json-server
 
   json-server:
     image: vimagick/json-server
-    container_name: blogx_database
+    container_name: blog_server_dev
     command: -H 0.0.0.0 -p 3000 -w db.json
     ports:
       - "3000:3000"

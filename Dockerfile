@@ -1,12 +1,13 @@
-FROM node:14.1.0 as build
-WORKDIR '/app'
+FROM node:16.14 AS build
 
-# RUN npm install -g npm@9.6.4
+WORKDIR /app
+
 COPY package.json .
 RUN npm install
 
 COPY . .
+CMD ["npm", "run", "build"]
 
-EXPOSE 4200
-
-CMD ["npm", "start"]
+FROM nginx:1.21.1-alpine
+COPY --from=build /app/dist/dgblogx /usr/share/nginx/html
+COPY nginx.conf /etc/nginx/conf.d/default.conf
