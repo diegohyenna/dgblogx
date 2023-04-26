@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: 'http://localhost:3000',
+  apiUrl: 'https://dgblog-server-2w3lnom44a-uc.a.run.app',
 };
