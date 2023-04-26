@@ -25,6 +25,7 @@ Com o CLI do angular
 Com o Docker
 
 - Instale o Docker e docker-compose, se tiver no windows, basta o docker desktop
+- Rode na pasta raíz do projeto `npm install`
 - Rode o comando `npm run docker:dev` e abra o navegador em `http://localhost:4200/`.
 
 ## Rodando testes unitários
