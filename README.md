@@ -1,30 +1,48 @@
-# Dgblogx
+# DGBlogX
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.6.
+Um projeto para poder me aprofundar no angular, testes e devops.
+Projeto gerado com [Angular CLI](https://github.com/angular/angular-cli) versão 15.2.6.
 
-## Development server
+## Tecnologias usadas
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Angular
+- Boostrap
+- Sass
+- Jasmine
+- GCloud
+- Github Actions
+- CI/CD
+- Docker/Docker compose
 
-## Code scaffolding
+## Servidor local
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Com o CLI do angular
 
-## Build
+- Instale a cli do angular: `npm i -g @angular/cli`
+- Rode na pasta raíz do projeto `npm install`
+- Rode `ng serve` na pasta raíz do projeto e abra o navegador em `http://localhost:4200/`.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Com o Docker
 
-## Running unit tests
+- Instale o Docker e docker-compose, se tiver no windows, basta o docker desktop
+- Rode o comando `npm run docker:dev` e abra o navegador em `http://localhost:4200/`.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Rodando testes unitários
 
-## Running end-to-end tests
+Testes locais
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- `npm run test` roda o comando padrão
+- `npm run test:coverage` roda o comando padrão e monta tbm a cobertura de testes, isso pode ser verificado abrindo o arquivo `coverage/dgblogx/index.html` no navegador
+
+Testes no servidor
+
+- `npm test:prod` comando que roda no github actions
 
 ## Deploy
 
-- Instale o SDK do GCloud
-- Depois rode na pasta raiz do projeto `gcloud init`
-- `gcloud config set project dgblogx-384713`
-- `gcloud auth login`
+Usando o GCloud.
+Tudo foi configurado usando o Cloud Run vinculado ao repositorio no github desse projeto.
+Usei Github Actions para fazer CI/CD, verifico o os testes uniários e formatação usando prettier.
+Para realizar o deploy basta criar um novo branch e subir as alterações.
+No Github, é preciso aprovar o pull request que só irá fazer o merge com master, se passar nos testes.
+Uma vez no master, o Cloud Run monta o projeto de acordo com o container do docker composer, builda o projeto e atualiza o link do projeto [Aqui](https://dgblogx-2w3lnom44a-uc.a.run.app)

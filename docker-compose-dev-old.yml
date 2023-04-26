@@ -1,0 +1,25 @@
+version: '3'
+services:
+  web:
+    container_name: blog_web_dev
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "4200:4200"
+    volumes:
+      - /app/node_modules
+      - .:/app
+    links:
+      - json-server
+
+  # Foi retirado o uso do json-server nesse projeto
+  json-server:
+    image: vimagick/json-server
+    container_name: blog_server_dev
+    command: -H 0.0.0.0 -p 3000 -w db.json
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./data:/data
+    restart: always
