@@ -13,7 +13,7 @@ export const environment = {
     measurementId: 'G-R0D38TZGL0',
   },
   production: false,
-  apiUrl: 'http://localhost:3000'
+  apiUrl: 'http://localhost:3000',
 };
 
 /*

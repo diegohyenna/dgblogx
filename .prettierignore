@@ -1,0 +1,25 @@
+# Ignore artifacts:
+build
+coverage
+.angular
+.github
+.vscode
+data
+dist
+node_modules
+
+.editorconfig
+.firebaserc
+.gitignore
+angular.json
+docker-compose-dev.yml
+docker-compose.yml
+Dockerfile
+Dockerfile.dev
+firebase.json
+nginx.conf
+package.json
+package-lock.json
+tsconfig.app.json
+tsconfig.json
+tsconfig.spec.json

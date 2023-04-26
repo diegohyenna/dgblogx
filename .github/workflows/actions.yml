@@ -1,0 +1,29 @@
+name: Testes Automatizados
+
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests
+        run: npm run test
+
+      - name: Verify Prettier formatting
+        run: npm run format:check
+        # uses: prettier/prettier-action@v3
+        # with:
+        #   path: "**/*.{js,jsx,ts,tsx,json,md}"
+        #   ignorePath: ".prettierignore"
+        #   check: true
